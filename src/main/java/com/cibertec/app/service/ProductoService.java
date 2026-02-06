@@ -18,5 +18,4 @@ public interface ProductoService {
 	
 	public Producto buscarProductoByCodigo(String codigo);
 	
-
 }

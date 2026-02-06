@@ -9,7 +9,7 @@ import com.cibertec.app.entity.Categoria;
 import com.cibertec.app.repository.CategoriaRepository;
 import com.cibertec.app.service.CategoriaService;
 
-@Service
+@Service  // SERVICE - Lógica de negocio - Spring crea y gestiona esta clase
 public class CategoriaServiceImpl implements CategoriaService {
 	
 	@Autowired

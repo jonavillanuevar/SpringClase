@@ -2,6 +2,7 @@ package com.cibertec.app.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 
@@ -13,5 +14,5 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer>{
 	@Query(value = "SELECT p.idproducto, p.codigo, p.descripcion, p.precio_compra,"
 			+ "p.precio_venta, p.stock, p.idcate FROM producto p WHERE p.codigo = :codigo", nativeQuery = true)
 
-	public Producto buscarProductoByCodigo(String codigo);
+	public Producto buscarProductoByCodigo(@Param("codigo") String codigo);
 }

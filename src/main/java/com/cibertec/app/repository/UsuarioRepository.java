@@ -5,9 +5,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import com.cibertec.app.entity.Usuario;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> { // Spring genera automáticamente la query SQL
 	//                                                      ↑       ↑
     //                                                   Entidad  Tipo del ID
+	
+	// Usuario: la entidad
+    // Long: el tipo del campo 'id'
 	
 	// Al extender JpaRepository, automáticamente obtienes estos métodos SIN escribir código:
     // - save(usuario)              → INSERT o UPDATE

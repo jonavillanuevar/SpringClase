@@ -8,4 +8,10 @@ import com.cibertec.app.entity.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, String>{
 	
+	// Una interfaz EXTIENDE otra interfaz
+    // Hereda las DECLARACIONES de métodos
+	
+	// Contexto: Interfaz ← Interfaz
+	// Qué heredas: Declaraciones de métodos (contratos)
+	// Quién implementa: Spring Data JPA (automáticamente)
 }

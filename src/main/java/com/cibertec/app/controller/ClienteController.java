@@ -8,20 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cibertec.app.entity.Cliente;
-import com.cibertec.app.repository.ClienteRepository;
 import com.cibertec.app.service.ClienteService;
 
 @Controller
 public class ClienteController {
-
-    private final ClienteRepository clienteRepository;
 	
 	@Autowired
 	private ClienteService service;
-
-    ClienteController(ClienteRepository clienteRepository) {
-        this.clienteRepository = clienteRepository;
-    }
 	
 	@GetMapping("/cliente")
 	public String listClientes(Model model) {
